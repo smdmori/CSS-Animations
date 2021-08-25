@@ -1,0 +1,46 @@
+button {
+  display: block;
+  width: 250px;
+  height: 100px;
+  background-color: blue;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  -webkit-transition: all 2.5s;
+  transition: all 2.5s;
+  position: relative;
+  left: 0;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: green;
+  position: relative;
+  left: 800px;
+}
+
+.ease button {
+  -webkit-transition: all 2.5s ease;
+  transition: all 2.5s ease;
+}
+
+.ease-in button {
+  -webkit-transition: all 2.5s ease-in;
+  transition: all 2.5s ease-in;
+}
+
+.ease-out button {
+  -webkit-transition: all 2.5s ease-out;
+  transition: all 2.5s ease-out;
+}
+
+.ease-in-out button {
+  -webkit-transition: all 2.5s ease-in-out;
+  transition: all 2.5s ease-in-out;
+}
+
+.linear button {
+  -webkit-transition: all 2.5s linear;
+  transition: all 2.5s linear;
+}
+/*# sourceMappingURL=style.css.map */
