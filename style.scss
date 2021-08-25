@@ -6,30 +6,30 @@ button {
     color: #fff;
     font-size: 1.5rem;
     border: none;
-    transition: all 2.5s;
-    position: relative;
-    left: 0;
     margin-bottom: 1rem;
 }
 
-button:hover {
-    background-color: green;
-    position: relative;
-    left: 800px;
+.move {
+    transition-property: translate();
+    transition-duration: 3s;
 }
 
-.ease button {
-    transition: all 2.5s ease;
+.move:hover {
+    transform: translate(800px);
 }
-.ease-in button {
-    transition: all 2.5s ease-in;
+
+.ease {
+    transition-timing-function: ease;
 }
-.ease-out button {
-    transition: all 2.5s ease-out;
+.ease-in {
+    transition-timing-function: ease-in;
 }
-.ease-in-out button {
-    transition: all 2.5s ease-in-out;
+.ease-out {
+    transition-timing-function: ease-out;
 }
-.linear button {
-    transition: all 2.5s linear;
+.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+.linear {
+    transition-timing-function: linear;
 }

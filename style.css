@@ -6,41 +6,43 @@ button {
   color: #fff;
   font-size: 1.5rem;
   border: none;
-  -webkit-transition: all 2.5s;
-  transition: all 2.5s;
-  position: relative;
-  left: 0;
   margin-bottom: 1rem;
 }
 
-button:hover {
-  background-color: green;
-  position: relative;
-  left: 800px;
+.move {
+  -webkit-transition-property: translate();
+  transition-property: translate();
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
 }
 
-.ease button {
-  -webkit-transition: all 2.5s ease;
-  transition: all 2.5s ease;
+.move:hover {
+  -webkit-transform: translate(800px);
+          transform: translate(800px);
 }
 
-.ease-in button {
-  -webkit-transition: all 2.5s ease-in;
-  transition: all 2.5s ease-in;
+.ease {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
-.ease-out button {
-  -webkit-transition: all 2.5s ease-out;
-  transition: all 2.5s ease-out;
+.ease-in {
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 
-.ease-in-out button {
-  -webkit-transition: all 2.5s ease-in-out;
-  transition: all 2.5s ease-in-out;
+.ease-out {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
-.linear button {
-  -webkit-transition: all 2.5s linear;
-  transition: all 2.5s linear;
+.ease-in-out {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.linear {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 /*# sourceMappingURL=style.css.map */
