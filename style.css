@@ -1,48 +1,55 @@
-button {
-  display: block;
-  width: 250px;
-  height: 100px;
-  background-color: blue;
-  color: #fff;
-  font-size: 1.5rem;
-  border: none;
-  margin-bottom: 1rem;
+html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.move {
-  -webkit-transition-property: translate();
-  transition-property: translate();
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.move:hover {
-  -webkit-transform: translate(800px);
-          transform: translate(800px);
+.container img {
+  width: 50%;
+  height: 50%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-.ease {
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+.container .description {
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-.ease-in {
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+.container:hover .description {
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
-.ease-out {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-}
-
-.ease-in-out {
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-
-.linear {
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+.container img:hover {
+  -webkit-transform: skew(0.1turn);
+          transform: skew(0.1turn);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
