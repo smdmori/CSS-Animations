@@ -255,7 +255,18 @@ html {
 .btn9 {
   color: tomato;
   border-color: tomato;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.btn9:hover {
   color: white;
+}
+
+.btn9:hover::before {
+  height: 100%;
+  border-radius: 0;
 }
 
 .btn9::before {
@@ -266,17 +277,10 @@ html {
   height: 100%;
   top: 0;
   left: 0;
-  border-radius: 0 0 100% 100%;
-  -webkit-transform: translateY(-100%) rotateY(90deg);
-          transform: translateY(-100%) rotateY(90deg);
+  border-radius: 0 0 50% 50%;
+  height: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: -1;
-}
-
-.btn9:hover::before {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  border-radius: 0;
 }
 /*# sourceMappingURL=style-light.css.map */

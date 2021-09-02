@@ -243,11 +243,21 @@ html {
     }
 }
 
+ /*******************MORI: IT DIDN'T WORK AS EXPECTED ********** */
 .btn9 {
     color: $color-tomato;
     border-color: $color-tomato;
-    color: $color-light;
-    // overflow: hidden;
+    transition: all 0.5s;
+    overflow: hidden;
+
+    &:hover {
+        color: $color-light;
+        &::before {
+            height: 100%;            
+            border-radius: 0;
+
+        }
+    }
 
     &::before {
         position: absolute;
@@ -259,19 +269,11 @@ html {
         top: 0;
         left: 0;
 
-        border-radius: 0 0 100% 100%;
-
-        transform: translateY(-100%) rotateY(90deg);
+        border-radius: 0 0 50% 50%;
+        height: 0;
         transition: all 0.5s;
         z-index: -1;
     }
-
-    &:hover {
-
-        &::before {
-            transform: translateY(0);
-            border-radius: 0;
-
-        }
-    }
 }
+
+ /******************* END OF MORI: IT DIDN'T WORK AS EXPECTED ********** */
