@@ -25,7 +25,7 @@ html {
 }
 
 .btn-default {
-  background-color: white;
+  background: none;
   text-transform: uppercase;
   margin: 1rem auto;
 }
@@ -260,15 +260,6 @@ html {
   overflow: hidden;
 }
 
-.btn9:hover {
-  color: white;
-}
-
-.btn9:hover::before {
-  height: 100%;
-  border-radius: 0;
-}
-
 .btn9::before {
   position: absolute;
   content: '';
@@ -282,5 +273,14 @@ html {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: -1;
+}
+
+.btn9:hover {
+  color: white;
+}
+
+.btn9:hover::before {
+  height: 100%;
+  border-radius: 0;
 }
 /*# sourceMappingURL=style-light.css.map */
