@@ -256,11 +256,25 @@ html {
 
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
 
-        border-radius: 0 0 50% 50%;
+        // top: 0; // comes from top
+
+        bottom: 0; // comes from bottom
+
+        left: 0; // comes from left
+
+        // border-radius: 0 50% 50% 0; // comes from left
+
+        // right: 0; // comes from right
+        
+        // border-radius: 50% 0 0 50%; // comes from right
+        
+        // width: 0; // comes from left or right
+
+        // border-radius: 0 0 50% 50%; //comes from top
+        border-radius: 50% 50% 0 0; //comes from bottom
         height: 0;
+
         transition: all 0.5s;
         z-index: -1;
     }
@@ -269,10 +283,42 @@ html {
         color: $color-light;
 
         &::before {
-            height: 100%;            
-            border-radius: 0;
+            // width: 100%; // comse from left or right 
+            height: 100%; // comes from top or bottom
+            border-radius: 0;          
         }
+    }    
+}
+
+.btn10 {
+    color: $color-tomato;
+    border-color: $color-tomato;
+
+    transition: all 0.5s;
+
+    overflow: hidden;
+    
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 0%;
+        background-color: $color-tomato;
+        bottom: 0;
+        left: 0;
+
+        border-radius: 50% 50% 0 0;
+
+        z-index: -1;
+
+        transition: all 0.5s;
     }
 
-    
+    &:hover {
+        color: $color-light;
+
+        &::before {
+            height: 190%;
+        }
+    }
 }
