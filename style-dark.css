@@ -13,32 +13,37 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: #333333;
 }
 
 .btn {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: black;
   font-family: sans-serif;
   font-size: 2rem;
-  border: 3px solid #000;
+  border: 3px solid black;
   padding: 1.2rem 2.5rem;
   margin-bottom: 2rem;
   position: relative;
 }
 
+.btn-default {
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
 .btn5 {
-  background-color: #333;
-  color: #fff;
-  border-color: #fff;
+  background-color: #333333;
+  color: white;
+  border-color: white;
   overflow: hidden;
 }
 
 .btn5::before {
   content: 'Yeah!';
   text-transform: uppercase;
-  background-color: lightcoral;
+  background-color: #db143c;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -65,9 +70,9 @@ body {
 }
 
 .btn6 {
-  background-color: #333;
-  color: #fff;
-  border-color: #fff;
+  background-color: #333333;
+  color: white;
+  border-color: white;
   -webkit-transition: all .5s;
   transition: all .5s;
   overflow: hidden;
@@ -76,7 +81,7 @@ body {
 .btn6::before {
   content: '';
   position: absolute;
-  background-color: #fff;
+  background-color: white;
   width: 100%;
   height: 50px;
   -webkit-transform: translateX(-100%) rotate(45deg);
@@ -91,6 +96,78 @@ body {
 }
 
 .btn6:hover {
-  background-color: #cc3333;
+  background-color: #ad102f;
+}
+
+.btn10 {
+  background-color: #e6c41a;
+  color: white;
+  border: none;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+.btn10::before {
+  content: 'button';
+  text-transform: uppercase;
+  position: absolute;
+  background-color: #1ae6a2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotateX(270deg);
+          transform: rotateX(270deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn10:hover::before {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.btn10::after {
+  content: 'button';
+  text-transform: uppercase;
+  position: absolute;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotateX(270deg);
+          transform: rotateX(270deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.btn10:hover::after {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
 }
 /*# sourceMappingURL=style-dark.css.map */

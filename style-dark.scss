@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+$color-dark: hsl(0, 0%, 0%);
+$color-light: hsl(0, 0%, 100%);
+$color-green: hsl(160, 80%, 50%);
+$color-red-light: hsl(348, 83%, 47%);
+$color-grey: hsl(0, 0%, 20%);
+$color-red-dark: hsl(348, 83%, 37%);
+$color-yellow: hsl(50, 80%, 50%);
+$color-tomato: hsl(9, 100%, 64%);
+
 html {
     height: 100vh;
     display: flex;
@@ -8,35 +17,38 @@ html {
 }
 
 body {
-	background-color: #333;
+    background-color: $color-grey;
 }
 
 .btn {
-    $color-btn: #000;
 
     display: block;
     text-decoration: none;
-    color: $color-btn; 
+    color: $color-dark;
     font-family: sans-serif;
     font-size: 2rem;
-    border: 3px solid $color-btn;
+    border: 3px solid $color-dark;
     padding: 1.2rem 2.5rem;
     margin-bottom: 2rem;
     position: relative;
 }
 
-.btn5 {
-    $color-btn5: #333;
+.btn-default {
+    text-transform: uppercase;
+    margin: 0 auto;
+}
 
-    background-color: $color-btn5;
-    color: #fff;
-    border-color: #fff;
+.btn5 {
+
+    background-color: $color-grey;
+    color: $color-light;
+    border-color: $color-light;
     overflow: hidden;
 
     &::before {
         content: 'Yeah!';
         text-transform: uppercase;
-        background-color: lightcoral;
+        background-color: $color-red-light;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -45,8 +57,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        transform: translateY(-100%); 
+
+        transform: translateY(-100%);
         transition: all 0.5s;
     }
 
@@ -56,11 +68,10 @@ body {
 }
 
 .btn6 {
-    $color-btn6: #333;
 
-    background-color: $color-btn6;
-    color: #fff;
-    border-color: #fff;
+    background-color: $color-grey;
+    color: $color-light;
+    border-color: $color-light;
     transition: all .5s;
 
     overflow: hidden;
@@ -69,22 +80,78 @@ body {
     &::before {
         content: '';
         position: absolute;
-        background-color: #fff;
-        
+        background-color: $color-light;
+
         width: 100%;
         height: 50px;
-        transform:  translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
         transition: all .5s;
-        
+
     }
-    
+
     &:hover::before {
-        transform:  translateX(100%) rotate(45deg);
+        transform: translateX(100%) rotate(45deg);
         // transform: translate(100%, 100%) rotate(-45deg);
     }
 
     &:hover {
-        background-color: hsl(0, 60%, 50%);
+        background-color: $color-red-dark;
+    }
+}
+
+.btn10 {
+    background-color: $color-yellow;
+    color: $color-light;
+    border: none;
+
+    font-weight: 100;
+    letter-spacing: 3px;
+
+    &::before {
+        content: 'button';
+        text-transform: uppercase;
+        position: absolute;
+        background-color: $color-green;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: rotateX(270deg);
+        transform-origin: top;
+        transition: all 0.5s;
+
     }
 
+    &:hover::before {
+        transform: rotateX(0deg);
+    }
+
+    &::after {
+        content: 'button';
+        text-transform: uppercase;
+        position: absolute;
+        background-color: $color-tomato;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: rotateX(270deg);
+        transform-origin: bottom;
+        transition: all 0.5s;
+        transition-delay: 0.3s;
+    }
+
+    &:hover::after {
+        transform: rotateX(0deg);
+    }
 }
